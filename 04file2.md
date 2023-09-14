@@ -1,4 +1,4 @@
-'''mermaid
+```mermaid
     sequenceDiagram
     participant browser
     participant server
@@ -7,4 +7,4 @@
     activate server
     server-->>browser: HTML document
     deactivate server
-'''
+```
