@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
- const course = 'Half Stack application development'
+
+
 const App = () => {
- 
+  const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
   const exercises1 = 10
   const part2 = 'Using props to pass data'
@@ -14,17 +14,9 @@ const App = () => {
 
   return (
     <div>
-      <Header/>
-      <p>
-        <Part1/>
-      </p>
-      <p>
-        <Part2/>
-      </p>
-      <p>
-        <Part3/>
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Header course={course} />
+      <Content />
+      <Total />
     </div>
   )
 }
@@ -35,21 +27,37 @@ const Header = () => {
   )
 }
 
+const Content = () => {
+  return (
+    <div>
+      <Part1 part1={part1} exercises1={exercises1} />
+      <Part2 part2={part2} exercises2={exercises2} />
+      <Part3 part3={part3} exercises3={exercises3} />
+    </div>
+  )
+}
+
 const Part1 = () => {
   return (
-    {part1},{exercises1}
+    <p>
+      {part1} {exercises1}
+    </p>
   )
 }
 
 const Part2 = () => {
   return (
-    {part2},{exercises2}
+    <p>
+      {part2} {exercises2}
+    </p>
   )
 }
 
 const Part3 = () => {
   return (
-    {part3},{exercises3}
+    <p>
+      {part2} {exercises2}
+    </p>
   )
 }
 
